@@ -1,15 +1,30 @@
+import java.util.Scanner;
 /**
  *
- * @author 
+ * @ThomasQuigley 
  */
 public class Main {
 
-  /**
-   * The method that is executed when you hit the run button.
-   * @param args the command line arguments
-   */
+  
   public static void main(String[] args) {
-    // TODO code application logic here
+    Scanner input = new Scanner(System.in);
+
+    // ask how many of each item
+    System.out.println("How many chromebook chargers?");
+    int chargers = input.nextInt();
+    System.out.println("How many motherboards?");
+    int motherboards = input.nextInt();
+    System.out.println("How many mice?");
+    int mice = input.nextInt();
+    // calculate the subtotal, taxes and total
+    double subTotal = chargers * 34.99 + motherboards * 127.50 + mice * 18.00;
+    double taxes = subTotal * 0.13;
+    double total = subTotal + taxes;
+    // tell them their subtotal, taxes and total
+    System.out.println("Subtotal = $" + subTotal);
+    System.out.println("Taxes = $" + taxes);
+    System.out.println("Total = $" + total);
+
     
   }
 }
